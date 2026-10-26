@@ -53,23 +53,22 @@ header{position:fixed;inset:16px 0 auto;z-index:50}
 /* hero */
 .hero{min-height:100svh;display:grid;align-items:center;padding:130px 0 70px;background:radial-gradient(800px 600px at 78% 40%,rgba(47,111,224,.35) 0,transparent 70%),var(--deep);position:relative;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2rem,4.6vw,3.8rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.12}
+.hero h1{font-size:clamp(1.6rem,2.9vw,2.45rem);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.12}
 .hero h1 span{display:block;overflow:hidden}
 .hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
 .hero h1 span:nth-child(2) i{animation-delay:.12s}
-.hero h1 span:nth-child(3) i{animation-delay:.24s;color:var(--sky)}
+.hero h1 span:nth-child(3) i{animation-delay:.24s}
+.hero h1 span:nth-child(4) i{animation-delay:.36s;color:var(--sky)}
+@media(min-width:901px){.hero h1 span{white-space:nowrap}}
 @keyframes up{to{transform:none}}
-.hero p.lead{max-width:30em;margin:28px 0 36px;font-size:1.2rem;color:#cdd8ee;opacity:0;animation:fade .8s .6s forwards}
+.hero p.lead{max-width:30em;margin:28px 0 36px;font-size:1.02rem;color:#cdd8ee;opacity:0;animation:fade .8s .6s forwards}
 .hero .cta{display:flex;flex-wrap:wrap;gap:14px;opacity:0;animation:fade .8s .8s forwards}
 @keyframes fade{to{opacity:1}}
-.hero-art{position:relative;aspect-ratio:4/5;max-width:420px;justify-self:center;width:100%}
+.hero-art{position:relative;aspect-ratio:1;max-width:420px;justify-self:center;width:100%}
 .hero-art .ring{position:absolute;inset:-9%;animation:spin 40s linear infinite}
 .hero-art .ring text{font:500 13px var(--display);letter-spacing:.18em;fill:var(--sky)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.hero-art img{position:absolute;inset:6%;width:88%;height:88%;object-fit:cover;border-radius:50% 50% var(--r) var(--r)/38% 38% var(--r) var(--r);transition:transform .2s;will-change:transform;-webkit-mask-image:linear-gradient(90deg,transparent 4%,#000 34%);mask-image:linear-gradient(90deg,transparent 4%,#000 34%)}
-.chip{position:absolute;padding:.55em 1em;border-radius:999px;background:#fff;color:var(--deep);font:600 .85rem var(--body);box-shadow:0 12px 30px -10px rgba(0,0,0,.5);animation:float 5s ease-in-out infinite}
-.chip b{color:var(--royal)}
-.chip.a{left:-4%;top:22%}.chip.b{right:-2%;top:46%;animation-delay:-1.6s}.chip.c{left:4%;bottom:8%;animation-delay:-3s}
+.hero-art img{position:absolute;inset:19%;width:62%;height:62%;object-fit:cover;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.08),0 30px 60px -20px rgba(0,0,0,.6);transition:transform .2s;will-change:transform}
 @keyframes float{50%{transform:translateY(-10px)}}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-art{max-width:380px}}
 
@@ -279,19 +278,16 @@ details p{padding-bottom:20px;color:#b9c8e6}
 <section class="hero">
   <div class="wrap">
     <div>
-      <h1><span><i>Sua empresa</i></span><span><i>dentro da norma.</i></span><span><i>Sua equipe segura.</i></span></h1>
-      <p class="lead">Treinamentos normativos, consultoria em SST e engenharia de segurança para reduzir acidentes e passivos trabalhistas, com respaldo técnico em cada documento.</p>
+      <h1><span><i>Soluções</i></span><span><i>estratégicas em</i></span><span><i>Segurança e Saúde</i></span><span><i>no Trabalho.</i></span></h1>
+      <p class="lead">Oferecemos soluções integradas em treinamentos normativos, consultoria especializada e engenharia de segurança, contribuindo para a prevenção de acidentes, a conformidade legal e o fortalecimento da cultura de segurança nas organizações.</p>
       <div class="cta">
         <a class="btn btn-wa" href="#nrs">Descobrir minhas NRs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
       </div>
     </div>
     <div class="hero-art" id="art">
-      <svg class="ring" viewBox="0 0 400 400" aria-hidden="true"><defs><path id="c" d="M200,200 m-185,0 a185,185 0 1,1 370,0 a185,185 0 1,1 -370,0"/></defs><text><textPath href="#c" textLength="1150" lengthAdjust="spacing">NR05 · NR10 · NR12 · NR13 · NR17 · NR18 · NR20 · NR33 · NR35 · PGR · LTCAT · AET ·</textPath></text></svg>
-      <img src="assets/hero-engenheira.jpg" alt="Engenheira de segurança com capacete e óculos de proteção">
-      <span class="chip a"><b>PGR</b> em dia</span>
-      <span class="chip b">Treino <b>NR35</b></span>
-      <span class="chip c">Laudos <b>LTCAT</b></span>
+      <svg class="ring" viewBox="0 0 400 400" aria-hidden="true"><defs><path id="c" d="M200,200 m-185,0 a185,185 0 1,1 370,0 a185,185 0 1,1 -370,0"/></defs><text><textPath href="#c" textLength="1150" lengthAdjust="spacing">GESTÃO DE RISCOS · GESTÃO DE RISCOS · GESTÃO DE RISCOS · GESTÃO DE RISCOS ·</textPath></text></svg>
+      <img src="assets/logo-marca.jpg" alt="Logotipo Gestão de Riscos">
     </div>
   </div>
 </section>
@@ -300,20 +296,21 @@ details p{padding-bottom:20px;color:#b9c8e6}
 
 <section class="why">
   <div class="wrap">
-    <h2>Segurança do trabalho levada a sério, do laudo ao chão de fábrica.</h2>
+    <h2>Diferenciais que fortalecem a segurança e a gestão empresarial.</h2>
+    <p class="sub">Aliamos conhecimento técnico, experiência prática e soluções especializadas para apoiar organizações na gestão de riscos ocupacionais, na conformidade legal e na melhoria contínua das condições de trabalho.</p>
     <div class="why-grid">
-      <article><h3>Critério técnico</h3><p>Cada programa, laudo e treinamento segue as Normas Regulamentadoras vigentes e é assinado por responsável técnico.</p></article>
-      <article><h3>Experiência de campo</h3><p>Atuação em indústria, logística, construção civil, agronegócio e operações corporativas, não só em teoria.</p></article>
-      <article><h3>Menos passivo trabalhista</h3><p>Documentação em dia e equipe treinada reduzem o risco de acidentes, multas e ações na Justiça do Trabalho.</p></article>
-      <article><h3>Nacional e multinacional</h3><p>Atendemos empresas de diversos segmentos e portes, com solução sob medida para cada operação.</p></article>
+      <article><h3>1. Rigor técnico e conformidade normativa</h3><p>Desenvolvemos treinamentos, avaliações e documentos técnicos fundamentados nas Normas Regulamentadoras e na legislação aplicável, com responsabilidade profissional e compromisso com a qualidade das entregas.</p></article>
+      <article><h3>2. Experiência técnica e operacional</h3><p>Atuamos em diferentes segmentos econômicos, incluindo indústria, construção civil, logística, agronegócio e serviços, desenvolvendo soluções alinhadas às particularidades e aos desafios de cada operação.</p></article>
+      <article><h3>3. Gestão preventiva e segurança jurídica</h3><p>Contribuímos para a identificação e o controle de riscos ocupacionais, o atendimento às obrigações legais e a redução da exposição das organizações a acidentes e passivos trabalhistas.</p></article>
+      <article><h3>4. Soluções corporativas personalizadas</h3><p>Oferecemos atendimento especializado a empresas de diferentes portes e segmentos, com soluções estruturadas conforme as necessidades operacionais, os requisitos normativos e os objetivos de cada organização.</p></article>
     </div>
   </div>
 </section>
 
 <section class="services" id="servicos">
   <div class="wrap">
-    <h2>Três frentes. Um objetivo: operação segura e dentro da lei.</h2>
-    <p class="sub">Atuamos com critério técnico, experiência de campo e alinhamento às Normas Regulamentadoras vigentes, para empresas nacionais e multinacionais.</p>
+    <h2>Soluções integradas em Segurança e Saúde no Trabalho.</h2>
+    <p class="sub">Atuamos em três áreas estratégicas — Treinamentos Normativos, Consultoria Especializada e Engenharia de Segurança — oferecendo soluções técnicas que contribuem para a gestão de riscos ocupacionais, a conformidade legal e a melhoria contínua das condições de segurança nas organizações.</p>
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-p="0">Treinamentos</button>
       <button class="tab" role="tab" aria-selected="false" data-p="1">Consultoria em SST</button>
@@ -323,12 +320,15 @@ details p{padding-bottom:20px;color:#b9c8e6}
     <div class="panel on" role="tabpanel">
       <div class="txt">
         <h3>Treinamentos corporativos e normativos</h3>
-        <p>Capacitações que cumprem a NR e criam cultura de prevenção na equipe.</p>
+        <p>Programas de capacitação em Segurança e Saúde no Trabalho, com abordagem teórica e prática, alinhados às Normas Regulamentadoras e às necessidades operacionais de cada organização.</p>
         <ul>
-          <li>CIPA, EPI, Primeiros Socorros e Brigada de Incêndio</li>
-          <li>Eletricidade (NR10), Máquinas (NR12), Caldeiras e Vasos (NR13)</li>
-          <li>Trabalho em Altura (NR35) e Espaço Confinado (NR33)</li>
-          <li>Treinamento personalizado conforme a operação do cliente</li>
+          <li>Segurança em Instalações e Serviços em Eletricidade (NR-10)</li>
+          <li>Transporte e Movimentação de Materiais (NR-11) e Segurança em Máquinas e Equipamentos (NR-12)</li>
+          <li>Caldeiras, Vasos de Pressão e Tubulações (NR-13)</li>
+          <li>Segurança na Construção Civil (NR-18)</li>
+          <li>Prevenção e Combate a Incêndios, CIPA e Primeiros Socorros</li>
+          <li>Segurança em Espaços Confinados (NR-33) e Trabalho em Altura (NR-35)</li>
+          <li>Programas de capacitação personalizados conforme os riscos e as características operacionais de cada empresa</li>
         </ul>
         <a class="btn btn-wa" href="#contato" data-svc="Treinamentos">Quero treinar minha equipe</a>
       </div>
@@ -338,7 +338,7 @@ details p{padding-bottom:20px;color:#b9c8e6}
     <div class="panel" role="tabpanel">
       <div class="txt">
         <h3>Consultoria estratégica em SST</h3>
-        <p>Soluções feitas sob medida para seus processos, com mais eficiência e segurança jurídica.</p>
+        <p>Soluções especializadas, estruturadas conforme os processos e os requisitos normativos de cada organização, com foco em eficiência e segurança jurídica.</p>
         <ul>
           <li>Diagnóstico de conformidade legal e adequação às NRs</li>
           <li>Implantação de programas e procedimentos operacionais</li>
@@ -353,10 +353,10 @@ details p{padding-bottom:20px;color:#b9c8e6}
     <div class="panel" role="tabpanel">
       <div class="txt">
         <h3>Engenharia aplicada à prevenção</h3>
-        <p>Identificação, avaliação e controle dos riscos ocupacionais, com laudos assinados por responsável técnico.</p>
+        <p>Identificação, avaliação e controle dos riscos ocupacionais, com documentos técnicos elaborados por profissionais habilitados.</p>
         <ul>
           <li>PGR, LTCAT e AET</li>
-          <li>Laudos de Insalubridade e Periculosidade</li>
+          <li>Laudos de Insalubridade e Periculosidade (NR-15 e NR-16)</li>
           <li>Higiene ocupacional e pareceres técnicos</li>
           <li>Inspeções e adequações NR13 e NR12</li>
         </ul>
@@ -377,23 +377,22 @@ details p{padding-bottom:20px;color:#b9c8e6}
 
 <section class="train" id="treinamentos">
   <div class="wrap">
-    <h2>Todos os treinamentos normativos em um só lugar.</h2>
-    <p class="sub">Turmas para a sua equipe, com certificado e conteúdo adaptado à sua operação.</p>
+    <h2>Portfólio de Treinamentos em Segurança e Saúde no Trabalho.</h2>
+    <p class="sub">Programas de capacitação profissional desenvolvidos conforme os requisitos normativos, com metodologias teóricas e práticas adaptadas às necessidades operacionais e aos riscos ocupacionais de cada organização.</p>
     <div class="tgrid" id="tgrid"></div>
   </div>
 </section>
 
 <section class="docs">
   <div class="wrap">
-    <h2>Documentos e laudos que a fiscalização pede.</h2>
-    <p class="sub">Elaboramos, revisamos e mantemos atualizados. Você só apresenta quando for cobrado.</p>
+    <h2>Documentos e laudos técnicos.</h2>
     <div class="dgrid">
-      <article><b>PGR</b><h3>Programa de Gerenciamento de Riscos</h3><p>Identifica os perigos da sua operação e define como controlá-los.</p></article>
-      <article><b>LTCAT</b><h3>Laudo Técnico das Condições Ambientais</h3><p>Avalia a exposição a agentes nocivos, base para a aposentadoria especial.</p></article>
-      <article><b>AET</b><h3>Análise Ergonômica do Trabalho</h3><p>Avalia postos e rotinas para prevenir doenças ocupacionais (NR17).</p></article>
-      <article><b>Laudos</b><h3>Insalubridade e periculosidade</h3><p>Definem, com base técnica, o direito a adicionais e as medidas de controle.</p></article>
-      <article><b>NR12</b><h3>Adequação de máquinas</h3><p>Inspeção e adequação de máquinas e equipamentos conforme a norma.</p></article>
-      <article><b>NR13</b><h3>Caldeiras e vasos de pressão</h3><p>Inspeções e adequações em caldeiras, vasos e tubulações.</p></article>
+      <article><b>PGR</b><h3>Programa de Gerenciamento de Riscos</h3><p>Identificação de perigos, avaliação de riscos ocupacionais e planejamento de medidas preventivas, conforme as diretrizes da NR-01.</p></article>
+      <article><b>LTCAT</b><h3>Laudo Técnico das Condições Ambientais do Trabalho</h3><p>Avaliação técnica das condições ambientais e da exposição ocupacional a agentes nocivos, para fins de caracterização previdenciária, conforme a legislação aplicável.</p></article>
+      <article><b>AET</b><h3>Análise Ergonômica do Trabalho</h3><p>Análise das condições e exigências das atividades laborais, com recomendações técnicas para adequação ergonômica e prevenção de agravos à saúde, conforme a NR-17.</p></article>
+      <article><b>Laudos</b><h3>Insalubridade e Periculosidade</h3><p>Avaliações técnicas das condições de trabalho para caracterização de atividades insalubres ou perigosas, conforme os critérios das NR-15 e NR-16.</p></article>
+      <article><b>NR-12</b><h3>Segurança em Máquinas e Equipamentos</h3><p>Avaliações técnicas, inspeções e desenvolvimento de soluções para adequação de máquinas e equipamentos aos requisitos de segurança da NR-12.</p></article>
+      <article><b>NR-13</b><h3>Caldeiras, Vasos de Pressão e Tubulações</h3><p>Inspeções de segurança, avaliações técnicas e serviços de engenharia voltados à integridade e à conformidade de equipamentos abrangidos pela NR-13.</p></article>
     </div>
   </div>
 </section>
@@ -434,12 +433,13 @@ details p{padding-bottom:20px;color:#b9c8e6}
 
 <section class="process">
   <div class="wrap">
-    <h2>Do primeiro contato à conformidade, em quatro passos.</h2>
+    <h2>Nossa Metodologia de Atendimento.</h2>
+    <p class="sub">Adotamos uma abordagem estruturada, fundamentada no planejamento técnico, na compreensão das necessidades de cada organização e na qualidade da execução dos serviços.</p>
     <ol class="steps" id="steps">
-      <li><h3>Conversa</h3><p>Você conta sobre a operação e a demanda.</p></li>
-      <li><h3>Diagnóstico</h3><p>Levantamos riscos e o que falta para estar em conformidade.</p></li>
-      <li><h3>Proposta</h3><p>Plano e orçamento claros, sem surpresas.</p></li>
-      <li><h3>Execução</h3><p>Treinamos, adequamos e entregamos a documentação.</p></li>
+      <li><h3>Levantamento de Necessidades</h3><p>Identificação das demandas, características operacionais e requisitos técnicos e normativos aplicáveis à organização.</p></li>
+      <li><h3>Análise Técnica</h3><p>Avaliação das informações e condições apresentadas, visando à definição das soluções mais adequadas às necessidades identificadas.</p></li>
+      <li><h3>Proposta Técnica e Comercial</h3><p>Apresentação do escopo de serviços, metodologia de execução, prazos e condições comerciais, com clareza e transparência.</p></li>
+      <li><h3>Execução e Entrega Técnica</h3><p>Desenvolvimento dos serviços contratados, com acompanhamento técnico, atendimento aos requisitos aplicáveis e entrega dos resultados previstos.</p></li>
     </ol>
   </div>
 </section>
@@ -448,11 +448,11 @@ details p{padding-bottom:20px;color:#b9c8e6}
   <div class="wrap">
     <h2>Dúvidas frequentes</h2>
     <div class="faq-list">
-      <details><summary>Como sei quais NRs minha empresa precisa cumprir?</summary><p>Depende da atividade, do grau de risco e dos equipamentos que você usa. Use o seletor acima para uma primeira indicação e peça um diagnóstico para confirmar o que se aplica.</p></details>
-      <details><summary>Vocês treinam na minha empresa?</summary><p>Fale com a gente pelo WhatsApp para combinar o formato e o local do treinamento. Também montamos conteúdo personalizado conforme a sua operação.</p></details>
-      <details><summary>Quem assina os laudos e programas?</summary><p>Os documentos de engenharia, como PGR, LTCAT, AET e laudos, são elaborados e assinados por responsável técnico habilitado.</p></details>
-      <details><summary>Atendem empresas de qualquer porte?</summary><p>Sim. Atendemos empresas nacionais e multinacionais, de diversos segmentos, com solução sob medida.</p></details>
-      <details><summary>Como peço um orçamento?</summary><p>Preencha o formulário no fim da página ou chame no WhatsApp. A mensagem já chega pronta e respondemos com os próximos passos.</p></details>
+      <details><summary>Quais Normas Regulamentadoras são aplicáveis à minha empresa?</summary><p>A aplicabilidade das Normas Regulamentadoras depende das atividades desenvolvidas, das condições de trabalho, dos riscos ocupacionais e das características operacionais de cada organização. A Gestão de Riscos oferece consultoria técnica especializada para identificar os requisitos legais e normativos aplicáveis, orientando as empresas quanto às medidas necessárias para a adequação de suas operações.</p></details>
+      <details><summary>A Gestão de Riscos realiza treinamentos nas instalações da empresa contratante?</summary><p>Sim. Realizamos treinamentos corporativos in company, com planejamento técnico e metodologias de ensino adaptadas às necessidades operacionais de cada organização. Nossos programas contemplam atividades teóricas e práticas, conforme os requisitos normativos aplicáveis, considerando as características das instalações, os riscos ocupacionais e as particularidades de cada operação.</p></details>
+      <details><summary>Como é assegurada a responsabilidade técnica na elaboração dos laudos e programas?</summary><p>Os laudos, programas e demais documentos técnicos são desenvolvidos com base na legislação vigente, nas Normas Regulamentadoras e nos critérios técnicos aplicáveis. A elaboração e a assinatura são realizadas por profissionais legalmente habilitados ou qualificados, conforme as exigências específicas de cada serviço, assegurando responsabilidade profissional, fundamentação técnica e confiabilidade às entregas.</p></details>
+      <details><summary>A Gestão de Riscos atende empresas de diferentes portes e segmentos?</summary><p>Sim. Atendemos organizações de diferentes portes e segmentos econômicos, incluindo empresas nacionais e multinacionais. Nossa atuação contempla soluções especializadas em treinamentos normativos, consultoria e engenharia de segurança, desenvolvidas de acordo com as necessidades operacionais, os requisitos legais e as particularidades de cada organização.</p></details>
+      <details><summary>Como solicitar uma proposta técnica e comercial?</summary><p>Para solicitar uma proposta, entre em contato com nossa equipe por meio do formulário disponível no site ou pelos nossos canais oficiais de atendimento. A partir das informações fornecidas, realizamos uma análise preliminar da demanda para estruturar uma proposta técnica e comercial, considerando o escopo dos serviços, as necessidades operacionais e os requisitos específicos da sua organização.</p></details>
     </div>
   </div>
 </section>
@@ -460,8 +460,8 @@ details p{padding-bottom:20px;color:#b9c8e6}
 <section class="cta-final" id="contato">
   <div class="wrap">
     <div>
-      <h2>Vamos deixar sua empresa em dia?</h2>
-      <p class="sub">Conte o que você precisa. A mensagem chega pronta no nosso WhatsApp e respondemos com os próximos passos.</p>
+      <h2>Soluções especializadas para os desafios de Segurança e Saúde no Trabalho da sua empresa.</h2>
+      <p class="sub">Conte com a experiência técnica da Gestão de Riscos para desenvolver soluções em treinamentos normativos, consultoria e engenharia de segurança. Solicite uma proposta técnica e comercial.</p>
       <div class="contacts">
         <a href="https://wa.me/5562981543056">(62) 98154-3056</a>
         <a href="https://instagram.com/gestaoderiscostce" target="_blank" rel="noopener">@gestaoderiscostce</a>
@@ -514,13 +514,13 @@ const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
 document.getElementById('ano').textContent=new Date().getFullYear();
 
 /* marquee com as NRs */
-const nrList={5:'CIPA',6:'EPI',10:'Eletricidade',11:'Movimentação de materiais',12:'Máquinas',13:'Caldeiras e vasos',17:'Ergonomia',18:'Construção civil',20:'Inflamáveis',23:'Incêndios',26:'Sinalização',31:'Trabalho rural',33:'Espaço confinado',35:'Trabalho em altura'};
+const nrList={5:'Comissão Interna de Prevenção de Acidentes e de Assédio (CIPA)',6:'Equipamento de Proteção Individual (EPI)',10:'Segurança em Instalações e Serviços em Eletricidade',11:'Transporte, Movimentação, Armazenagem e Manuseio de Materiais',12:'Segurança no Trabalho em Máquinas e Equipamentos',13:'Caldeiras, Vasos de Pressão, Tubulações e Tanques Metálicos de Armazenamento',17:'Ergonomia',18:'Segurança e Saúde no Trabalho na Indústria da Construção',20:'Segurança e Saúde no Trabalho com Inflamáveis e Combustíveis',23:'Proteção Contra Incêndios',26:'Sinalização de Segurança',31:'Segurança e Saúde no Trabalho na Agricultura, Pecuária, Silvicultura, Exploração Florestal e Aquicultura',33:'Segurança e Saúde nos Trabalhos em Espaços Confinados',35:'Trabalho em Altura'};
 const extras=['Brigada de Incêndio','Primeiros Socorros','Integrações de Segurança','Treinamentos personalizados'];
 document.getElementById('tgrid').innerHTML=[...Object.entries(nrList).map(([n,t])=>['NR'+String(n).padStart(2,'0'),t]),...extras.map(t=>['',t])].map(([c,t],i)=>'<div><img src="assets/ico/i'+String(i+1).padStart(2,'0')+'.jpg" alt="" loading="lazy">'+(c?'<b>'+c+'</b>':'')+'<span>'+t+'</span></div>').join('');
-const cl=[['sika','Sika'],['helexia','Helexia'],['shopee','Shopee'],['luizhohl','Grupo Luiz Hohl'],['nossojeito','Nosso Jeito de Cuidar'],['jeepel','Jeepel'],['brk','BRK'],['kraftheinz','KraftHeinz'],['beauvallet','Beauvallet'],['jspecas','JS Peças'],['piracanjuba','Grupo Piracanjuba'],['sephora','Sephora'],['adimax','Adimax'],['krona','Krona'],['inti','Inti AgSolutions'],['equiplex','Equiplex'],['isi','Lajes Santa Inês'],['dcco','DCCO'],['milhao','Milhão Ingredients'],['transplex','Transplex']];
-const dm={"sika":[166,135],"helexia":[347,63],"shopee":[201,199],"luizhohl":[198,145],"nossojeito":[325,117],"jeepel":[329,99],"brk":[242,70],"kraftheinz":[320,45],"beauvallet":[301,142],"jspecas":[164,106],"piracanjuba":[443,99],"sephora":[338,175],"adimax":[317,127],"krona":[266,138],"inti":[89,111],"equiplex":[379,127],"isi":[262,154],"dcco":[373,105],"milhao":[373,91],"transplex":[399,133]};
-const lr=a=>{const h=a.map(([f,n])=>{const [w,k]=dm[f],ar=w/k;let ht=Math.min(50,Math.sqrt(6000/ar));if(ht*ar>150)ht=150/ar;return '<img src="assets/clientes/'+f+'.png" alt="'+n+'" style="height:'+ht.toFixed(0)+'px">'}).join('');return h+h};
-document.getElementById('logos').innerHTML='<div class="lrow">'+lr(cl.slice(0,10))+'</div><div class="lrow rev">'+lr(cl.slice(10))+'</div>';
+const cl=[['sika','Sika'],['helexia','Helexia'],['shopee','Shopee'],['luizhohl','Grupo Luiz Hohl'],['nossojeito','Nosso Jeito de Cuidar'],['jeepel','Jeepel'],['brk','BRK'],['kraftheinz','KraftHeinz'],['beauvallet','Beauvallet'],['jspecas','JS Peças'],['piracanjuba','Grupo Piracanjuba'],['sephora','Sephora'],['adimax','Adimax'],['krona','Krona'],['inti','Inti AgSolutions'],['equiplex','Equiplex'],['isi','Lajes Santa Inês'],['dcco','DCCO'],['milhao','Milhão Ingredients'],['transplex','Transplex'],['wearegroup','We Are Group'],['solutecmed','Solutecmed'],['lcm','LCM Construção'],['inteligenciaconstrutiva','Inteligência Construtiva'],['ramasa.svg','Ramasa Auto']];
+const dm={"sika":[166,135],"helexia":[347,63],"shopee":[201,199],"luizhohl":[198,145],"nossojeito":[325,117],"jeepel":[329,99],"brk":[242,70],"kraftheinz":[320,45],"beauvallet":[301,142],"jspecas":[164,106],"piracanjuba":[443,99],"sephora":[338,175],"adimax":[317,127],"krona":[266,138],"inti":[89,111],"equiplex":[379,127],"isi":[262,154],"dcco":[373,105],"milhao":[373,91],"transplex":[399,133],"wearegroup":[236,73],"solutecmed":[242,77],"lcm":[400,163],"inteligenciaconstrutiva":[107,125],"ramasa.svg":[133,43]};
+const lr=a=>{const h=a.map(([f,n])=>{const [w,k]=dm[f],ar=w/k;let ht=Math.min(50,Math.sqrt(6000/ar));if(ht*ar>150)ht=150/ar;return '<img src="assets/clientes/'+(f.includes('.')?f:f+'.png')+'" alt="'+n+'" style="height:'+ht.toFixed(0)+'px">'}).join('');return h+h};
+document.getElementById('logos').innerHTML='<div class="lrow">'+lr(cl.slice(0,13))+'</div><div class="lrow rev">'+lr(cl.slice(13))+'</div>';
 const mq=document.getElementById('mq');
 const row=Object.entries(nrList).map(([n,t])=>`<span>NR${String(n).padStart(2,'0')} ${t}</span>`).join('');
 mq.innerHTML=row+row;
