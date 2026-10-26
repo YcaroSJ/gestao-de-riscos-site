@@ -210,7 +210,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:45;bac
 .lrow{display:flex;width:max-content;gap:72px;align-items:center;animation:slide 50s linear infinite}
 .lrow.rev{animation-direction:reverse;animation-duration:58s}
 .logos:hover .lrow{animation-play-state:paused}
-.lrow img{width:auto;object-fit:contain;opacity:.75;transition:opacity .25s,transform .25s}
+.lrow img{width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.6;transition:opacity .25s,transform .25s}
 .lrow img:hover{opacity:1;transform:scale(1.08)}
 .why,.train,.docs,.sectors,.faq{background:var(--deep)}
 .why h2,.train h2,.docs h2,.sectors h2,.faq h2{font-size:clamp(1.35rem,2.3vw,1.9rem);font-weight:700;line-height:1.2;max-width:17em}
