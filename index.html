@@ -204,6 +204,28 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:45;bac
 .btn{will-change:transform}
 
 /* novas seções */
+.gal{background:var(--navy)}
+.gal h2{font-size:clamp(1.35rem,2.3vw,1.9rem);font-weight:700;line-height:1.2;max-width:17em}
+.gal-grid{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,minmax(0,210px));gap:12px}
+.gal-grid button{position:relative;padding:0;border:0;border-radius:18px;overflow:hidden;cursor:zoom-in;background:var(--deep)}
+.gal-grid button:first-child{grid-column:span 2;grid-row:span 2;border-radius:28px;outline:2px solid var(--safety);outline-offset:4px}
+.gal-grid button:nth-child(n+6){display:none}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s,opacity .7s}
+.gal-grid img.out{opacity:0;transform:scale(1.12)}
+.gal-grid button{opacity:0;transform:translateY(28px) scale(.94)}
+.gal-grid.in button{animation:gup .7s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--k)*110ms)}
+@keyframes gup{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.gal-grid button{opacity:1;transform:none;animation:none!important}}
+.gal-grid button:hover img{transform:scale(1.07)}
+.gal-grid button:nth-child(5)::after{content:"+" attr(data-more) " fotos";position:absolute;inset:0;display:grid;place-items:center;background:rgba(10,22,48,.72);color:var(--safety);font:700 1.3rem var(--display);transition:background .3s}
+.gal-grid button:nth-child(5):hover::after{background:rgba(10,22,48,.5)}
+@media(max-width:700px){.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:150px}.gal-grid button:first-child{grid-column:span 2;grid-row:span 2}}
+#lb{border:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;padding:16px;color:#fff}
+#lb::backdrop{background:rgba(6,10,20,.94)}
+#lb img{position:absolute;inset:16px;margin:auto;max-width:calc(100% - 32px);max-height:calc(100% - 32px);border-radius:10px}
+#lb button{position:absolute;z-index:1;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:1.6rem;cursor:pointer}
+#lb .x{top:16px;right:16px}#lb .p{left:16px;top:50%}#lb .n{right:16px;top:50%}
+
 .clients{background:var(--deep)}
 .clients h2{font-size:clamp(1.35rem,2.3vw,1.9rem);font-weight:700;line-height:1.2;max-width:17em}
 .logos{margin-top:48px;display:grid;gap:34px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);overflow:hidden}
@@ -268,6 +290,7 @@ details p{padding-bottom:20px;color:#b9c8e6}
     <ul>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#clientes">Clientes</a></li><li><a href="#treinamentos">Treinamentos</a></li><li><a href="#nrs">Quais NRs?</a></li>
+      <li><a href="#galeria">Galeria</a></li>
       <li><a href="#diretor">Quem somos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
@@ -431,6 +454,14 @@ details p{padding-bottom:20px;color:#b9c8e6}
     </div>
   </div>
 </section>
+
+<section class="gal" id="galeria">
+  <div class="wrap">
+    <h2>Nosso trabalho, de perto.</h2>
+    <div class="gal-grid" id="gal"><button type="button" aria-label="Ampliar foto 1"><img src="assets/galeria/g01.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 2"><img src="assets/galeria/g02.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 3"><img src="assets/galeria/g03.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 4"><img src="assets/galeria/g04.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" data-more="10" aria-label="Ver todas as fotos"><img src="assets/galeria/g05.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 6"><img src="assets/galeria/g06.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 7"><img src="assets/galeria/g07.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 8"><img src="assets/galeria/g08.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 9"><img src="assets/galeria/g09.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 10"><img src="assets/galeria/g10.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 11"><img src="assets/galeria/g11.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 12"><img src="assets/galeria/g12.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 13"><img src="assets/galeria/g13.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 14"><img src="assets/galeria/g14.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button><button type="button" aria-label="Ampliar foto 15"><img src="assets/galeria/g15.jpg" alt="Equipe da Gestão de Riscos em treinamento e atividades de campo" loading="lazy"></button></div>
+  </div>
+</section>
+<dialog id="lb" aria-label="Foto ampliada"><img alt=""><button class="x" aria-label="Fechar">&times;</button><button class="p" aria-label="Anterior">&lsaquo;</button><button class="n" aria-label="Próxima">&rsaquo;</button></dialog>
 
 <section class="process">
   <div class="wrap">
@@ -655,6 +686,21 @@ function net(sec){
   })(0);
 }
 document.querySelectorAll('.hero,.cta-final').forEach(net);
+</script>
+<script>
+(function(){var g=document.getElementById("gal"),d=document.getElementById("lb"),im=d.querySelector("img"),b=[].slice.call(g.children),L=b.map(function(x){return x.firstChild.src}),i=0,t=b.slice(0,5),c=5,k=0,hov=0;
+b.forEach(function(x,n){x.style.setProperty("--k",n);x.dataset.i=n});
+function show(n){i=(n+L.length)%L.length;im.src=L[i]}
+b.forEach(function(x){x.onclick=function(){show(+x.dataset.i);d.showModal()}});
+d.querySelector(".x").onclick=function(){d.close()};d.querySelector(".p").onclick=function(){show(i-1)};d.querySelector(".n").onclick=function(){show(i+1)};
+d.onclick=function(e){if(e.target===d)d.close()};
+d.onkeydown=function(e){if(e.key==="ArrowLeft")show(i-1);if(e.key==="ArrowRight")show(i+1)};
+g.onmouseenter=function(){hov=1};g.onmouseleave=function(){hov=0};
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+if("IntersectionObserver" in window&&!rm)new IntersectionObserver(function(e,o){if(e[0].isIntersecting){g.classList.add("in");o.disconnect()}}).observe(g);else g.classList.add("in");
+if(!rm)setInterval(function(){if(hov||d.open||document.hidden)return;
+var x=t[k++%5],img=x.firstChild,n;do{n=c++%L.length}while(t.some(function(y){return +y.dataset.i===n}));
+var p=new Image();p.onload=function(){img.classList.add("out");setTimeout(function(){img.src=L[n];x.dataset.i=n;img.classList.remove("out")},700)};p.src=L[n]},2600);})();
 </script>
 </body>
 </html>
